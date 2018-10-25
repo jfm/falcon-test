@@ -1,4 +1,5 @@
 import falcon
+from api.resources.kafka import KafkaResource
 
 class QuoteResource:
     def on_get(self, req, resp):
@@ -16,6 +17,7 @@ class QuoteResource:
 def create():
     api = falcon.API()
     api.add_route('/quote', QuoteResource())
+    api.add_route('/kafka', KafkaResource())
     return api
 
 quote = create()
