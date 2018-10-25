@@ -13,5 +13,9 @@ class QuoteResource:
 
         resp.media = quote
 
-api = falcon.API()
-api.add_route('/quote', QuoteResource())
+def create():
+    api = falcon.API()
+    api.add_route('/quote', QuoteResource())
+    return api
+
+create()
