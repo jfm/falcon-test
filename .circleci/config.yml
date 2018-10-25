@@ -98,7 +98,7 @@ workflows:
       - build
       - deploy_to_development:
           requires:
-            - build_and_test
+            - build
           filters:
             branches:
               only: master
