@@ -2,9 +2,10 @@ FROM python:3.7-alpine
 
 WORKDIR /usr/src/app
 
-#COPY requirements.txt ./
-#RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir pipenv
 
 COPY . .
 
-CMD [ "python", "./run.py" ]
+RUN pipenv sync --dev
+
+CMD [ "pipenv", "run", "gunicorn", "--bind=0.0.0.0", "run:quote" ]

@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 falcon = "*"
 pytest = "*"
+gunicorn = "*"
 
 [dev-packages]
 

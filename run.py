@@ -18,4 +18,4 @@ def create():
     api.add_route('/quote', QuoteResource())
     return api
 
-create()
+quote = create()
