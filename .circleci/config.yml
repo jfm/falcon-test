@@ -58,7 +58,7 @@ jobs:
     docker:
       - image: google/cloud-sdk
     environment:
-      - PROJECT_NAME: "KubernetesTesting"
+      - PROJECT_NAME: "falcon-test"
       - GOOGLE_PROJECT_ID: "kubernetestesting-220412"
       - GOOGLE_COMPUTE_ZONE: "europe-north1-a"
       - GOOGLE_CLUSTER_NAME: "development"
